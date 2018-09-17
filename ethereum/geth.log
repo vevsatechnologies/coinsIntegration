@@ -1,0 +1,14 @@
+INFO [09-05|11:42:53] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-05|11:42:55] Starting peer-to-peer node               instance=Geth/v1.8.2-stable-b8b9f7f4/linux-amd64/go1.9.4
+INFO [09-05|11:42:55] Allocated cache and file handles         database=/home/alisha/.ethereum/geth/chaindata cache=768 handles=512
+INFO [09-05|11:42:56] Initialised chain configuration          config="{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000 Byzantium: 4370000 Constantinople: <nil> Engine: ethash}"
+INFO [09-05|11:42:56] Disk storage enabled for ethash caches   dir=/home/alisha/.ethereum/geth/ethash count=3
+INFO [09-05|11:42:56] Disk storage enabled for ethash DAGs     dir=/home/alisha/.ethash               count=2
+INFO [09-05|11:42:56] Initialising Ethereum protocol           versions="[63 62]" network=1
+INFO [09-05|11:42:57] Loaded most recent local header          number=0 hash=d4e567…cb8fa3 td=17179869184
+INFO [09-05|11:42:57] Loaded most recent local full block      number=0 hash=d4e567…cb8fa3 td=17179869184
+INFO [09-05|11:42:57] Loaded most recent local fast block      number=0 hash=d4e567…cb8fa3 td=17179869184
+INFO [09-05|11:42:57] Loaded local transaction journal         transactions=0 dropped=0
+INFO [09-05|11:42:57] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-05|11:42:58] Starting P2P networking 
+Fatal: Error starting protocol stack: listen udp :30303: bind: address already in use
