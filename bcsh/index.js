@@ -29,7 +29,7 @@ var txID = "d9ada17d5079bd39c78e6bc11458feeec564200190bc3b5c90977e796cbee11d"
   * @returns
   *       {null}
   */
-// client.importAddress("mzqwAJtw8zwyoWcMA4MaGYuURBdLjAJvUm").then((result) => console.log("Address Imported"));
+client.importAddress("mzqwAJtw8zwyoWcMA4MaGYuURBdLjAJvUm").then((result) => console.log("Address Imported"));
 
 
 
@@ -44,7 +44,7 @@ var txID = "d9ada17d5079bd39c78e6bc11458feeec564200190bc3b5c90977e796cbee11d"
   * @returns - 
   *     {Number} - balance 
   */
-// client.getBalance("", 0).then((balance) => console.log("Balance: "+ balance));
+client.getBalance("", 0).then((balance) => console.log("Balance: "+ balance));
 
 
 
