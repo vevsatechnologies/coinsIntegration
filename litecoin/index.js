@@ -1,34 +1,41 @@
 var litecoin  = require('node-litecoin');
 
 var client = new litecoin.Client({
-  host: 'localhost',
+  host: '206.189.135.167',
   port: 19332,
-  user: 'alisha',
-  pass: 'alisha'
+  user: 'test',
+  pass: 'test123'
 });
 
 
-var address = 'mzqwAJtw8zwyoWcMA4MaGYuURBdLjAJvUm'
 
 
 
-/**
-  * Returns balance for an account and minimum number of confirmations
-  *
-  * @params -
-  *     {String} - Account                       ; required , "" default account  
-  *     {Int} - minimum number of confirmations  ; optional
-  *
-  * @returns - 
-  *     {Number} - balance 
-  */
+var address = 'myfpQbH489pyt7nDFrWz8ZrrkcnmtrbyKH'
+
+
+
+// *
+//   * Returns balance for an account and minimum number of confirmations
+//   *
+//   * @params -
+//   *     {String} - Account                       ; required , "" default account  
+//   *     {Int} - minimum number of confirmations  ; optional
+//   *
+//   * @returns - 
+//   *     {Number} - balance 
+  
 client.getBalance('*', 6, function(err, balance) {
   if (err) return console.log(err);
-  console.log('Balance:', balance);
+  console.log('Balance:'+ balance);
 });
 
 
 
+client.cmd('importaddress',address,'',false,function(err, fee) {
+    if (err) return console.log(err);
+  console.log("Address Imported ");        
+})
 
 
 /**
@@ -84,13 +91,13 @@ client.listUnspent(0,99999,[address],function(err,unspent) {
 
 
 
-/**
-  * Calculates estimated fees
-  *
-  * @params {Int}-Blocks ; The maximum number of blocks a transaction should have to wait before it is predicted to be included in a block. Has to be between 2 and 25 blocks
-  *
-  * @returns {object} fee ; the feerate is sent to the front-end during signing of the transaction
-  */
+// *
+//   * Calculates estimated fees
+//   *
+//   * @params {Int}-Blocks ; The maximum number of blocks a transaction should have to wait before it is predicted to be included in a block. Has to be between 2 and 25 blocks
+//   *
+//   * @returns {object} fee ; the feerate is sent to the front-end during signing of the transaction
+  
 client.cmd('estimatesmartfee',6,function(err, fee) {
     if (err) return console.log(err);
   console.log("Fees: " + JSON.stringify(fee));        //fee.feerate will be sent to front-end
